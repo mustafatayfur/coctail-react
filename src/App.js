@@ -16,7 +16,7 @@ function App() {
                 <Home/>
             </Route>
             <Route path="/about" >
-                <Home/>
+                <About/>
             </Route>
             <Route path="/coctail/:id" >
                 <SingleCocktail/>
