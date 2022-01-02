@@ -43,12 +43,11 @@ const SingleCocktail = () => {
           }else {
             setCocktail(null)
           }
-          setLoading(false)
         }
         catch(error){
             console.log(error);
-            setLoading(false)
         }
+        setLoading(false)
       }
       getCocktail()
   },[id])
@@ -58,8 +57,8 @@ const SingleCocktail = () => {
   }
   if(!cocktail){
     return  <h2 className='section-title'>no cocktail to display</h2>
-  }
-  const {name, image, info, category, glass, instructions, ingredients} = cocktail;
+  }else{
+    const {name, image, info, category, glass, instructions, ingredients} = cocktail;
 
   return (
     <section className='section cocktail-section'>
@@ -104,7 +103,8 @@ const SingleCocktail = () => {
             </div>
         </div>
     </section>
-  )
+   )
+  }
 }
 
 export default SingleCocktail
